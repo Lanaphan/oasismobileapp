@@ -1,48 +1,47 @@
 function DOMLoaded() {
-	document.addEventListener("deviceready", phonegapLoaded, false);	
+	document.addEventListener("deviceready", localready, false);	
 }
 
-function phonegapLoaded() {
+function localready() {
+    cordova.exec(null, null, "SplashScreen", "hide", []);
+	localStorage.setItem('MyFile', 'Retrieved from local storage.');
+	var element = document.getElementById('info');
+	element.innerHTML = localStorage.getItem('MyFile');
 }
 
-function alert() {
-	navigator.notification.alert(
-		'Hello world', 
-		dismissed, 
-		'Alert',
-		'Done'
-	);
+var db;
+
+function ready() {
+	cordova.exec(null, null, "SplashScreen", "hide", []);
+	db = window.openDatabase("Database", "1.0", "OasisDB", 20000);
+	db.transaction(populateDB, errorDB, successDB);
 }
 
-function dismissed() {
-	$(function() {
-		$("body").append("<h1>DISMISSED</h1>");
-	});
+function populateDB(pdb) {
+	pdb.executeSql('DROP TABLE IF EXISTS CUSTOMER');
+	pdb.executeSql('CREATE TABLE IF NOT EXISTS CUSTOMER (id unique, data');
+	pdb.executeSql('INSERT INTO CUSTOMER (id, data) VALUES (Lana, password');
+	pdb.executeSql('INSERT INTO CUSTOMER (id, data) VALUES (Elliot, password');
 }
 
-function confirm() {
-	navigator.notification.confirm(
-		'What bread would you like', 
-		onConfirm, 
-		'Confirmation',
-		'Whole Grain,Brown Bread,White Bread'
-	);
+function errorDB(err) {
+	alert("There was an error. Error code: " + err.code + " Error Message" + err.message);
 }
 
-function onConfirm(button) {
-	if (button == 1) {
-			$(function() {
-		$("body").append("<h1>Whole Grain</h1>");
-	});
-	} 
-	
-	if (button == 2) {
-			$(function() {
-		$("body").append("<h1>Brown Bread</h1>");});
+function successDB() {
+	db.transaction(queryDB, errorDB);
+}
+
+function queryDB(qdb) {
+	qdb.executeSql('SELECT * FROM CUSTOMER', [], querySuccess, errorDB);
+}
+
+function querySuccess(qdb, results) {
+	var info = document.getElementById('info');
+	var length = results.rows.length;
+	for (var i = 0; i < length; i++) {
+		info.innerHTML += "ID = " + results.rows.item(i).id + " Data = " + results.rows.item(i).data + "<br/>";
 	}
 	
-	if  (button == 3){
-	$(function() {
-		$("body").append("<h1>White Bread</h1>"); });
-	}
+
 }

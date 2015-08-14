@@ -1,20 +1,19 @@
 <!DOCTYPE html> 
 <html> 
-	<head> 
-	<title>Oasis Mobile App</title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-
-  <link rel="stylesheet" 
-    href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-  <script type="text/javascript" src="phonegap.js"></script>
-  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-  <script 
-    src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
+<head> 
+<title>Oasis Mobile App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<script type="text/javascript" src="phonegap.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="cordova-1.9.0.js"type="text/javascript"></script>
+<script src="myapp.js" type="text/javascript"></script>
 </head> 
+
 <body>
-<div data-role="page" id="welcome" data-theme="d">
+<div data-role="page" id="welcome" data-theme="b">
 	<div data-role="header" data-position="fixed">
 		<h1>Welcome Screen</h1>
 	</div>
@@ -28,11 +27,11 @@
 		</ul>		
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="aboutUs" data-theme="d">
+<div data-role="page" id="aboutUs" data-theme="b">
 	<div data-role="header" data-position="fixed">
   
     <a href="#welcome">Back</a>
@@ -46,51 +45,75 @@
 		</ul>		
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
 
-<div data-role="page" id="history" data-theme="d">
+<div data-role="page" id="history" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#aboutUs">Back</a>
 		<h1>History</h1>
 	</div>
 	<div data-role="content">	
-		Content		
+		Welcome to the Oasis Tea Zone Mobile App! We have stores in three locations in the greater Seattle, Washington area: one in the International District, one in the University District, and one inside the Renton Village Uwajimaya.
+
+We serve up delicious traditional style Taiwanese bubble tea, in addition to a wide selection of unique flavored teas, slushes, and other blended and shaken beverages you can't get anywhere else. Oasis also offers a variety of tasty snacks and sweet desserts, including our famous popcorn chicken.
+
+	
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="socialMedia" data-theme="d">
+<div data-role="page" id="socialMedia" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	 <a href="#aboutUs">Back</a>
 		<h1>Social Media</h1>
 	</div>
 	<div data-role="content">	
-		Content		
+		<ul data-role="listview">
+            <a href="https://www.facebook.com/seattleoasis" data-role="button">Facebook</a>
+            <a href="https://instagram.com/oasisteazone/" data-role="button">Instagram</a>
+            <a href="http://www.yelp.com/biz/oasis-tea-zone-renton" data-role="button">Yelp</a>
+		</ul>		
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="FAQ" data-theme="d">
+<div data-role="page" id="FAQ" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	 <a href="#aboutUs">Back</a>
 		<h1>FAQ</h1>
 	</div>
 	<div data-role="content">	
-		Content		
+	<br>	Bubble tea originated in Taiwan in the 1980s, but in recent years it has gained popularity in other countries, including America. Many people experience bubble tea for the first time at Oasis, and they often have questions about what it is, where it comes from, and what options are available. Oasis offers a very wide variety of flavors and styles of bubble tea, and it can be a little overwhelming at first. On this page you can check out some answers to frequently asked questions and learn about the make up of your average bubble tea. 
+<br>
+<br><b>What is the origin of bubble tea?</b>
+<br>Bubble tea, also known as "foam tea" by some, originated in Taiwan. Every bubble tea shop has its own unique recipes, but your basic bubble tea usually consists of a black or green tea tea base, which has flavored syrups and/or milk added to it to create its own unique flavor. Some people add "toppings" to their bubble tea, which may include tapioca pearls, jellies, or puddings.
+<br>
+<br><b>Why is it called bubble tea?</b>
+<br>Non-blended varieties of bubble tea are shaken to combine the assorted ingredients, creating bubbles or foam, which is why they are called "bubble tea".
+<br>
+<br><b>What are tapioca pearls/boba/bubbles?</b>
+<br>Tapioca is a starch extracted from the cassava root, which is native to South America. Before preparation, tapioca pearls are small, hard, and opaque. They must be soaked and boiled before they reach the translucent, purple appearance we all know so well. Tapioca pearls are different from "tapioca pudding", which is ironically made with arrowroot and not cassava root! The name "tapioca pudding" is a bit of a misnomer in that respect.
+<br>
+<br><b>What options do you have for people with dietary restrictions? (ex. sugar free, caffeine free, dairy free, gluten free, vegan, etc.)</b>
+<br>We offer many options at Oasis. You may be surprised to learn that the classic recipe for milk tea uses non-dairy creamer, not milk! Many of our drinks, including milk tea and "snow" varieties, are non-dairy and perfect for our lactose intolerant and vegan customers. You can also substitute soymilk upon request. For our caffeine intolerant customers, we offer some hot loose herbal teas and all of our "snow" and "slush" drinks are made without caffeine. Tapioca pearls are naturally gluten free. Please let us know about your dietary restrictions up front, and we'll do our best to accomodate you!
+<br>
+<br><b>What's the best way to enjoy a bubble tea?</b>
+<br>Getting your first bubble tea can be a bit bewildering, so we thought we'd include the steps to properly enjoying your bubble tea. When you first receive your freshly sealed cup, give it a hearty shake, especially if you've gotten some tapioca pearls or jellies! This distributes your toppings throughout your tea, so they don't all get stuck at the bottom. Don't worry, the seal is very tight! Just don't squeeze the cup too much, or you might have a mess on your hands. Once you've shaken your drink, pierce the lid with the straw. Make sure to choose one of the "fat" straws if you got a drink with toppings! Last but not least, sip and enjoy.
+	
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="locations" data-theme="d">
+<div data-role="page" id="locations" data-theme="b">
 	<div data-role="header" data-position="fixed">
          <a href="#welcome">Back</a>
 		<h1>Locations</h1>
@@ -103,11 +126,11 @@
 		</ul>	
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="rentonInfo" data-theme="d">
+<div data-role="page" id="rentonInfo" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#locations">Back</a>
 		<h1>Renton</h1>
@@ -126,11 +149,11 @@
         Phone Number: 425.227.7832 
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="seattleInfo" data-theme="d">
+<div data-role="page" id="seattleInfo" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#locations">Back</a>
 		<h1>Seattle</h1>
@@ -149,11 +172,11 @@
         Phone Number: 206.447.8098 
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="uwInfo" data-theme="d">
+<div data-role="page" id="uwInfo" data-theme="b">
 	<div data-role="header" data-position="fixed">
     <a href="#locations">Back</a>
 		<h1>University of Washington</h1>
@@ -173,11 +196,11 @@
         Phone Number: 206.547.9967 
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="menu" data-theme="d">
+<div data-role="page" id="menu" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#welcome">Back</a>
 		<h1>Menu</h1>
@@ -191,16 +214,19 @@
             <a href="#toppings" data-role="button">Toppings</a>	
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="milkTea" data-theme="d">
+<div data-role="page" id="milkTea" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#menu">Back</a>
 		<h1>Milk Tea</h1>
 	</div>
 	<div data-role="content">	
+	<br> Delicious, traditional style milk tea.
+	<br> Available hot or cold
+	<br>
     <ul>
         <li>Almond</li>
         <li>Banana</li>
@@ -236,16 +262,19 @@
 
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="flavorTea" data-theme="d">
+<div data-role="page" id="flavorTea" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#menu">Back</a>
 		<h1>Flavored Tea</h1>
 	</div>
 	<div data-role="content">	
+	<br> Refreshing flavored black or green tea.
+	<br> Available hot or cold
+	<br>
     <ul>
         <li>Blueberry</li>
         <li>Ginger</li>
@@ -269,16 +298,19 @@
     </ul>
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="slush" data-theme="d">
+<div data-role="page" id="slush" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#menu">Back</a>
 		<h1>Slush</h1>
 	</div>
 	<div data-role="content">	
+	<br> Smooth and icey blended drink.
+	<br> Available in a variety of different flavors.
+	<br>
     <ul>
         <li>Blueberry*</li>
         <li>Chocolate</li>
@@ -307,16 +339,19 @@
 
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="snow" data-theme="d">
+<div data-role="page" id="snow" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#menu">Back</a>
 		<h1>Snow</h1>
 	</div>
 	<div data-role="content">	
+	<br> Creamy blended shake.
+	<br> Available in a variety of different flavors.
+	<br>
     <ul>
         <li>Almond</li>
         <li>Banana**</li>
@@ -357,16 +392,19 @@
     </ul>
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="smoothies" data-theme="d">
+<div data-role="page" id="smoothies" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#menu">Back</a>
 		<h1>Smoothies and Specialty</h1>
 	</div>
 	<div data-role="content">	
+	<br> Tasty and unique drinks you won't find anywhere else.
+	<br> Smoothies made with 100% real fruit.
+	<br>
     <ul>
         <li>Strawberry Smoothie</li>
         <li>Mango Smoothie </li>
@@ -379,16 +417,18 @@
     </ul>
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="toppings" data-theme="d">
+<div data-role="page" id="toppings" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#menu">Back</a>
 		<h1>Toppings</h1>
 	</div>
     <div data-role="content">	
+    <br> Add one of our delicious toppings to your drink!
+	<br>
     <ul>
         <li>Tapioca</li>
         <li>Lychee Jelly</li>
@@ -400,24 +440,25 @@
     </ul>
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="specials" data-theme="d">
+<div data-role="page" id="specials" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#welcome">Back</a>
 		<h1>Specials</h1>
 	</div>
 	<div data-role="content">	
-		Content		
+		<br>Did you know you can get a <b>FREE</b> drink on your birthday?
+		<br> 	
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="stampCard" data-theme="d">
+<div data-role="page" id="stampCard" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#welcome">Back</a>
 		<h1>Stamp Card</h1>
@@ -430,11 +471,11 @@
         </ul>
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="logIn" data-theme="d">
+<div data-role="page" id="logIn" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#stampCard">Back</a>
 		<h1>Log In</h1>
@@ -452,11 +493,11 @@
 	 </form>
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 
-<div data-role="page" id="signUp" data-theme="d">
+<div data-role="page" id="signUp" data-theme="b">
 	<div data-role="header" data-position="fixed">
     	<a href="#stampCard">Back</a>
 		<h1>Sign Up</h1>
@@ -477,7 +518,7 @@
 	</form>	
 	</div>
 	<div data-role="footer" data-position="fixed">
-		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
 </div>
 </body>
