@@ -1,15 +1,482 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html> 
 <html>
 <head>
-<title> My App </title>
-<script src="cordova-1.9.0.js" type="text/javascript"></script>
-<script src="jquery-2.1.4.js" type="text/javascript"></script>
-<script src="myapp.js" type="text/javascript"></script>
+<meta charset="utf-8">
+<title>Oasis Mobile App</title>
 
-</head>
-<body onLoad="DOMLoaded()">
-<a href="#" onClick="confirm(); return false;">
-<h1>Confirmation</h1>
-</a>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+
+</head> 
+<body> 
+
+<div data-role="page" id="welcome" data-theme="a">
+	<div data-role="header" data-position="fixed">
+		<h1>Welcome Screen</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+        	<a href="#aboutUs" data-role="button">About Us</a>
+            <a href="#locations" data-role="button">Locations</a>
+            <a href="#menu" data-role="button">Menu</a>
+            <a href="#specials" data-role="button">Specials</a>
+            <a href="#stampCard" data-role="button">Stamp Card</a>
+		</ul>		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="aboutUs" data-theme="d">
+	<div data-role="header" data-position="fixed">
+  
+    <a href="#welcome">Back</a>
+		<h1>About Us</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+            <a href="#history" data-role="button">History</a>
+            <a href="#socialMedia" data-role="button">Social Media</a>
+            <a href="#FAQ" data-role="button">FAQ</a>
+		</ul>		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="history" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#aboutUs">Back</a>
+		<h1>History</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="socialMedia" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	 <a href="#aboutUs">Back</a>
+		<h1>Social Media</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="FAQ" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	 <a href="#aboutUs">Back</a>
+		<h1>FAQ</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="locations" data-theme="d">
+	<div data-role="header" data-position="fixed">
+         <a href="#welcome">Back</a>
+		<h1>Locations</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+            <a href="#rentonInfo" data-role="button">Renton</a>
+            <a href="#seattleInfo" data-role="button">Seattle</a>
+            <a href="#uwInfo" data-role="button">UW</a>
+		</ul>	
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="rentonInfo" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#locations">Back</a>
+		<h1>Renton</h1>
+	</div>
+	<div data-role="content">	
+		Hours: Mon - Thu  11am - 7pm 
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Fri - Sun  11am - 8pm 
+        <br>
+        <br>
+      	Address: 501 S Grady Way, Renton, WA 98057 
+        <br>
+        <br>
+        Phone Number: 425.227.7832 
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="seattleInfo" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#locations">Back</a>
+		<h1>Seattle</h1>
+	</div>
+	<div data-role="content">	
+		Hours: Sun - Thu  11am - 12am 
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Fri - Sat  11am - 2am 
+        <br>
+        <br>
+      	Address: 519 6th Ave S, Seattle, WA 98104 
+        <br>
+        <br>
+        Phone Number: 206.447.8098 
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="uwInfo" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    <a href="#locations">Back</a>
+		<h1>University of Washington</h1>
+	</div>
+	<div data-role="content">	
+		Hours: Mon - Sat  11am - 12pm 
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Sun  11am - 11pm 
+        <br>
+        <br>
+      	Address: 4508 University Way NE, Seattle, WA 98105 
+        <br>
+        <br>
+        Phone Number: 206.547.9967 
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="menu" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#welcome">Back</a>
+		<h1>Menu</h1>
+	</div>
+	<div data-role="content">	
+        	<a href="#milkTea" data-role="button">Milk Tea</a>
+            <a href="#flavorTea" data-role="button">Flavored Tea</a>
+            <a href="#slush" data-role="button">Slush</a>
+            <a href="#snow" data-role="button">Snow</a>	
+            <a href="#smoothies" data-role="button">Smoothies and Specialty</a>	
+            <a href="#toppings" data-role="button">Toppings</a>	
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="milkTea" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#menu">Back</a>
+		<h1>Milk Tea</h1>
+	</div>
+	<div data-role="content">	
+    <ul>
+        <li>Almond</li>
+        <li>Banana</li>
+        <li>Blueberry</li>
+        <li>Chocolate</li>
+        <li>Coconut</li>
+        <li>Coffee</li>
+        <li>Ginger</li>
+        <li>Green Apple</li>
+        <li>Green Bean</li>
+        <li>Green Milk Tea</li>
+        <li>Honey</li>
+        <li>Honeydew</li>
+        <li>Hong Kong Style</li>
+        <li>Jasmine </li>
+        <li>Lavender</li>
+        <li>Lavender/Mint</li>
+        <li>Lychee</li>
+        <li>Mango</li>
+        <li>Matcha</li>
+        <li>Mocha</li>
+        <li>Passion Fruit</li>
+        <li>Peach</li>
+        <li>Peppermint</li>
+        <li>Pineapple</li>
+        <li>Red Bean</li>
+        <li>Royal Milk Tea </li>
+        <li>Strawberry</li>
+        <li>Taro </li>
+        <li>Thai Tea</li>
+        <li>Vanilla</li>
+    </ul>
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="flavorTea" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#menu">Back</a>
+		<h1>Flavored Tea</h1>
+	</div>
+	<div data-role="content">	
+    <ul>
+        <li>Blueberry</li>
+        <li>Ginger</li>
+        <li>Grape</li>
+        <li>Green Apple</li>
+        <li>Guava</li>
+        <li>Honey</li>
+        <li>Honey Lemon**</li>
+        <li>Jasmine/Green Tea</li>
+        <li>Kiwi</li>
+        <li>Lemon**</li>
+        <li>Lychee</li>
+        <li>Mango</li>
+        <li>Passion Fruit</li>
+        <li>Peach</li>
+        <li>Peppermint</li>
+        <li>Pineapple </li>
+        <li>Sour Plum</li>
+        <li>Strawberry</li>
+        <li>Yogurt</li>
+    </ul>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="slush" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#menu">Back</a>
+		<h1>Slush</h1>
+	</div>
+	<div data-role="content">	
+    <ul>
+        <li>Blueberry*</li>
+        <li>Chocolate</li>
+        <li>Coconut</li>
+        <li>Coffee</li>
+        <li>Grape</li>
+        <li>Green Apple</li>
+        <li>Green Mango*</li>
+        <li>Honey</li>
+        <li>Honeydew</li>
+        <li>Kiwi</li>
+        <li>Lavender</li>
+        <li>Lavender/Mint</li>
+        <li>Lemon</li>
+        <li>Lychee</li>
+        <li>Mango*</li>
+        <li>Mocha</li>
+        <li>Passion Fruit</li>
+        <li>Peach*</li>
+        <li>Peppermint</li>
+        <li>Pineapple*</li>
+        <li>Sour Plum*</li>
+        <li>Strawberry*</li>
+        <li>Yogurt</li>
+    </ul>
+
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="snow" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#menu">Back</a>
+		<h1>Snow</h1>
+	</div>
+	<div data-role="content">	
+    <ul>
+        <li>Almond</li>
+        <li>Banana**</li>
+        <li>Blueberry*</li>
+        <li>Chocolate</li>
+        <li>Coconut</li>
+        <li>Coconut/Green Bean*</li>
+        <li>Coffee</li>
+        <li>Ginger</li>
+        <li>Grape</li>
+        <li>Green Apple</li>
+        <li>Green Bean*</li>
+        <li>Green Mango*</li>
+        <li>Honey</li>
+        <li>Honeydew</li>
+        <li>Jasmine</li>
+        <li>Kiwi</li>
+        <li>Lavender</li>
+        <li>Lavender/Mint</li>
+        <li>Lemon</li>
+        <li>Lychee</li>
+        <li>Mango*</li>
+        <li>Matcha</li>
+        <li>Milk Tea Snow</li>
+        <li>Mocha</li>
+        <li>Passion Fruit</li>
+        <li>Peach*</li>
+        <li>Peppermint</li>
+        <li>Pineapple*</li>
+        <li>Red Bean*</li>
+        <li>Sour Plum*</li>
+        <li>Strawberry*</li>
+        <li>Strawberry/Taro</li>
+        <li>Taro</li>
+        <li>Thai Tea Snow</li>
+        <li>Vanilla</li>
+        <li>Yogurt</li>
+    </ul>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="smoothies" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#menu">Back</a>
+		<h1>Smoothies and Specialty</h1>
+	</div>
+	<div data-role="content">	
+    <ul>
+        <li>Strawberry Smoothie</li>
+        <li>Mango Smoothie </li>
+        <li>Pineapple Smoothie </li>
+        <li>Avocado Smoothie</li>
+        <li>Durian Smoothie</li>
+        <li>Orange Creamsicle</li>
+        <li>Vanilla Strawberry Crunch</li>
+        <li>Cookies and Cream</li>
+    </ul>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="toppings" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#menu">Back</a>
+		<h1>Toppings</h1>
+	</div>
+    <div data-role="content">	
+    <ul>
+        <li>Tapioca</li>
+        <li>Lychee Jelly</li>
+        <li>Rainbow Jelly</li>
+        <li>Mango Jelly</li>
+        <li>Apple Jelly</li>
+        <li>Coffee Jelly</li>
+        <li>Egg Pudding</li>
+    </ul>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="specials" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#welcome">Back</a>
+		<h1>Specials</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="stampCard" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#welcome">Back</a>
+		<h1>Stamp Card</h1>
+	</div>
+	<div data-role="content">	
+    	<ul data-role="listview">
+            <a href="#logIn" data-role="button">Log In</a>
+            <a href="#signUp" data-role="button">Sign Up</a>        	
+
+        </ul>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="logIn" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#stampCard">Back</a>
+		<h1>Log In</h1>
+	</div>
+	<div data-role="content">	
+	<form action="../Dropbox/Lana_Alex_BOOM/Oasis App/SUBMISSION PAGE">
+  	Username: <input type="text" name="username"  placeholder="username">
+    <br>
+    Password: <input type="text" name="password"  placeholder="password">
+    <br>
+ 	 <input type="submit" value="Submit">
+     </form>
+     <form action="../Dropbox/Lana_Alex_BOOM/Oasis App/FORGOT PASSWORD PAGE">
+     <input type="submit" value="Forgot password?">
+	 </form>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
+
+<div data-role="page" id="signUp" data-theme="d">
+	<div data-role="header" data-position="fixed">
+    	<a href="#stampCard">Back</a>
+		<h1>Sign Up</h1>
+	</div>
+	<div data-role="content">	
+	<form action="../Dropbox/Lana_Alex_BOOM/Oasis App/demo_form.asp">
+  	Username: <input type="text" name="username"  placeholder="username">
+    <br>
+    Password: <input type="text" name="password"  placeholder="password">
+    <br>
+    Re-enter Password: <input type="text" name="password"  placeholder="re-enter password">
+    <br>
+    Birthdate: <input type="text" name="birthdate" placeholder="12/34/56">
+    <br>
+    Email (In case you forget your username/password): <input type="text" name="phoneNumber" placeholder="ILoveOasis@Oasis.com">
+    <br>
+ 	 <input type="submit" value="Submit">
+	</form>	
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><a href="#welcome">  <img src="../Dropbox/Lana_Alex_BOOM/Oasis App/oasis_logo.gif" style="width:150px;height:67px;border:0;"></a></center></h4>
+	</div>
+</div>
 </body>
 </html>
