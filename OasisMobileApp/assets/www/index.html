@@ -2,15 +2,26 @@
 <html> 
 <head> 
 <title>Oasis Mobile App</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-
 <script type="text/javascript" src="phonegap.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-
+<script type="text/javascript">
+	function submitForm() {
+		var uname = $('[name="username"]').val();
+		var pwd = $('[name="password"]').val();
+		
+		window.localStorage.setItem("username", uname);
+		window.localStorage.setItem("password", pwd);
+		
+		$.mobile.changePage("#submitUser", {reverse: false, transition: "slide"} );
+	
+		$('#output').html("Username: " + window.localStorage.getItem("username") + "<br>" + "Password: " + window.localStorage.getItem("password") );
+		return true;
+    }
+</script>
 </head> 
 
 <body>
@@ -482,16 +493,13 @@ We serve up delicious traditional style Taiwanese bubble tea, in addition to a w
 		<h1>Log In</h1>
 	</div>
 	<div data-role="content">	
-	<form action="../Dropbox/Lana_Alex_BOOM/Oasis App/SUBMISSION PAGE">
-  	Username: <input type="text" name="username"  placeholder="username">
-    <br>
-    Password: <input type="text" name="password"  placeholder="password">
-    <br>
+	<form method = "POST" onSubmit="return submitForm()" data-ajax = "false">
+  	<label>Username:</label> <input type="text" name="username"  placeholder="username">
+    
+    <label>Password:</label> <input type="text" name="password"  placeholder="password">
+    
  	 <input type="submit" value="Submit">
-     </form>
-     <form action="../Dropbox/Lana_Alex_BOOM/Oasis App/FORGOT PASSWORD PAGE">
-     <input type="submit" value="Forgot password?">
-	 </form>
+	</form>	
 	</div>
 	<div data-role="footer" data-position="fixed">
 		<h4><center>Oasis Tea Zone</center></h4>
@@ -504,23 +512,39 @@ We serve up delicious traditional style Taiwanese bubble tea, in addition to a w
 		<h1>Sign Up</h1>
 	</div>
 	<div data-role="content">	
-	<form action="../Dropbox/Lana_Alex_BOOM/Oasis App/demo_form.asp">
-  	Username: <input type="text" name="username"  placeholder="username">
-    <br>
-    Password: <input type="text" name="password"  placeholder="password">
-    <br>
-    Re-enter Password: <input type="text" name="password"  placeholder="re-enter password">
-    <br>
-    Birthdate: <input type="text" name="birthdate" placeholder="MM/DD">
-    <br>
-    Email (In case you forget your username/password): <input type="text" name="phoneNumber" placeholder="ILoveOasis@Oasis.com">
-    <br>
+	<form method = "POST" onSubmit="return submitForm()">
+  	<label>Username:</label> <input type="text" name="username"  placeholder="username">
+    
+    <label>Password:</label> <input type="text" name="password"  placeholder="password">
+    
+    <label>Re-enter Password:</label> <input type="text" name="password"  placeholder="re-enter password">
+    
+     <label> Birthdate: </label> <input type="text" name="birthdate" placeholder="MM/DD">
+    
+    <label>Email (In case you forget your username/password): </label><input type="text" name="phoneNumber" placeholder="ILoveOasis@Oasis.com">
+    
  	 <input type="submit" value="Submit">
 	</form>	
 	</div>
 	<div data-role="footer" data-position="fixed">
 		<h4><center>Oasis Tea Zone</center></h4>
 	</div>
+    
+    <div data-role="page" id="submitUser" data-theme="b" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+    	<a href="#welcome">Back</a>
+		<h1>New User Confirmation</h1>
+	</div>
+	<div data-role="content">	
+		<div id = "output">
+        </div>
+        
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4><center>Oasis Tea Zone</center></h4>
+	</div>
+</div>
+    
 </div>
 </body>
 </html>
