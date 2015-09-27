@@ -153,23 +153,14 @@
  <div data-role="tabs" id="tabs">
   <div data-role="navbar">
     <ul>
-      <li><a href="#rentonInfo" class="ui-btn-active" data-ajax="false">Renton</a></li>
-      <li><a href="#seattleInfo" data-ajax="false">Seattle</a></li>
-      <li><a href="#uwInfo" data-ajax="false">UW</a></li>
+      <li><a href="#rentonInfo" target="locationframe">Renton</a></li>
+      <li><a href="#seattleInfo" target="locationframe">Seattle</a></li>
+      <li><a href="#uwInfo" target="locationframe">UW</a></li>
     </ul>
   </div>
-	<iframe name=frame src="#rentonInfo" width=100% height=100%></iframe>
+	<iframe src="#rentonInfo" name="locationframe" id="locationframe" width="100%" height="450" ></iframe>
   </div>
 </div> 
-
-<!--   <div data-role="content">
-
-    <ul data-role="listview">
-      <a href="#rentonInfo" data-role="button">Renton</a> 
-      <a href="#seattleInfo" data-role="button">Seattle</a> 
-      <a href="#uwInfo" data-role="button">UW</a>
-    </ul>
-  </div> -->
   <div data-role="footer" data-position="fixed">
     <h4>
       <center>
@@ -178,6 +169,7 @@
     </h4>
   </div>
 </div>
+
 <div data-role="page" id="rentonInfo" data-theme="d" class="ui-body-d tablist-content">
   <div data-role="content">
   	<center>
@@ -195,9 +187,6 @@
     </div>
 </div>
 <div data-role="page" id="seattleInfo" data-theme="d" class="ui-body-d tablist-content"++>
-  <div data-role="header" data-position="fixed"> <a href="#locations">Back</a>
-    <h1>Seattle</h1>
-  </div>
   <div data-role="content"> 
   	<center>
   	Hours: Sun - Thu  11am - 12am <br>
@@ -212,18 +201,8 @@
     Phone Number: 206.447.8098 
     </center>
     </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
 </div>
 <div data-role="page" id="uwInfo" data-theme="d" class="ui-body-d tablist-content">
-  <div data-role="header" data-position="fixed"> <a href="#locations">Back</a>
-    <h1>University of Washington</h1>
-  </div>
   <div data-role="content"> 
     <center>
     Hours: Mon - Sat  11am - 12pm <br>
@@ -239,19 +218,25 @@
     Phone Number: 206.547.9967 
     </center>
     </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
 </div>
 <div data-role="page" id="menu" data-theme="d">
   <div data-role="header" data-position="fixed"> <a href="#welcome">Back</a>
     <h1>Menu</h1>
   </div>
-  <div data-role="content"> <a href="#milkTea" data-role="button">Milk Tea</a> <a href="#flavorTea" data-role="button">Flavored Tea</a> <a href="#slush" data-role="button">Slush</a> <a href="#snow" data-role="button">Snow</a> <a href="#smoothies" data-role="button">Smoothies and Specialty</a> <a href="#toppings" data-role="button">Toppings</a> </div>
+ <div data-role="tabs" id="tabs">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#milkTea" target="menuframe">Milk Tea</a> </li>
+      <li><a href="#flavorTea" target="menuframe">Flavored Tea</a> </li>
+      <li><a href="#slush" target="menuframe">Slush</a> </li>
+      <li><a href="#snow" target="menuframe">Snow</a> </li>
+      <li><a href="#smoothies" target="menuframe">Smoothies and Specialty</a></li>
+      <li><a href="#toppings" target="menuframe">Toppings</a> </li>
+    </ul>
+  </div>
+	<iframe src="#milkTea" name="menuframe" id="menuframe" width="100%" height="450" ></iframe>
+  </div>
+</div> 
   <div data-role="footer" data-position="fixed">
     <h4>
       <center>
@@ -261,9 +246,6 @@
   </div>
 </div>
 <div data-role="page" id="milkTea" data-theme="d">
-  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
-    <h1>Milk Tea</h1>
-  </div>
   <div data-role="content"> <br>
     Delicious, traditional style milk tea. <br>
     Available hot or cold <br>
@@ -300,18 +282,8 @@
       <li>Vanilla</li>
     </ul>
   </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
 </div>
 <div data-role="page" id="flavorTea" data-theme="d">
-  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
-    <h1>Flavored Tea</h1>
-  </div>
   <div data-role="content"> <br>
     Refreshing flavored black or green tea. <br>
     Available hot or cold <br>
@@ -337,18 +309,8 @@
       <li>Yogurt</li>
     </ul>
   </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
 </div>
 <div data-role="page" id="slush" data-theme="d">
-  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
-    <h1>Slush</h1>
-  </div>
   <div data-role="content"> <br>
     Smooth and icey blended drink. <br>
     Available in a variety of different flavors. <br>
@@ -378,18 +340,8 @@
       <li>Yogurt</li>
     </ul>
   </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
 </div>
 <div data-role="page" id="snow" data-theme="d">
-  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
-    <h1>Snow</h1>
-  </div>
   <div data-role="content"> <br>
     Creamy blended shake. <br>
     Available in a variety of different flavors. <br>
@@ -432,18 +384,8 @@
       <li>Yogurt</li>
     </ul>
   </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
 </div>
 <div data-role="page" id="smoothies" data-theme="d">
-  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
-    <h1>Smoothies and Specialty</h1>
-  </div>
   <div data-role="content"> <br>
     Tasty and unique drinks you won't find anywhere else. <br>
     Smoothies made with 100% real fruit. <br>
@@ -458,18 +400,8 @@
       <li>Cookies and Cream</li>
     </ul>
   </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
 </div>
 <div data-role="page" id="toppings" data-theme="d">
-  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
-    <h1>Toppings</h1>
-  </div>
   <div data-role="content"> <br>
     Add one of our delicious toppings to your drink! <br>
     <ul>
@@ -481,13 +413,6 @@
       <li>Coffee Jelly</li>
       <li>Egg Pudding</li>
     </ul>
-  </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
   </div>
 </div>
 <div data-role="page" id="specials" data-theme="d">
