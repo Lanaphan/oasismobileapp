@@ -1,13 +1,33 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
+<!DOCTYPE html>
+<html>
+<head>
 <title>Oasis Mobile App</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="css/themes.OasisStyleSheet.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+
+<script type="text/javascript" src="phonegap.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+<script type="text/javascript" src="js/index.js"></script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="OasisStyleSheet.css" />
+
 <script type="text/javascript" src="phonegap.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+
+
 <script type="text/javascript">
 	function submitForm() {
 		var uname = $('[name="username"]').val();
@@ -16,535 +36,554 @@
 		window.localStorage.setItem("username", uname);
 		window.localStorage.setItem("password", pwd);
 		
-		$.mobile.changePage("#submitUser", {reverse: false, transition: "slide"} );
+		$.mobile.changePage("#submitUser",{reverse:false,transition:"slide"});
 	
-		$('#output').html("Username: " + window.localStorage.getItem("username") + "<br>" + "Password: " + window.localStorage.getItem("password") );
-		return true;
+		$('#output').html("Username: " + window.localStorage.getItem("username") + "<br>" + 
+						  "Password: " + window.localStorage.getItem("password") );
+		return false;
     }
 </script>
-</head> 
-
+</head>
 <body>
-<div data-role="page" id="welcome" data-theme="b">
-	<div data-role="header" data-position="fixed">
-		<h1>Welcome Screen</h1>
-	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-        	<a href="#aboutUs" data-role="button">About Us</a>
-            <a href="#locations" data-role="button">Locations</a>
-            <a href="#menu" data-role="button">Menu</a>
-            <a href="#specials" data-role="button">Specials</a>
-            <a href="#stampCard" data-role="button">Stamp Card</a>
-		</ul>		
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-<div data-role="page" id="aboutUs" data-theme="b">
-	<div data-role="header" data-position="fixed">
-  
-    <a href="#welcome">Back</a>
-		<h1>About Us</h1>
-	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-            <a href="#history" data-role="button">History</a>
-            <a href="#socialMedia" data-role="button">Social Media</a>
-            <a href="#FAQ" data-role="button">FAQ</a>
-		</ul>		
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-
-<div data-role="page" id="history" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#aboutUs">Back</a>
-		<h1>History</h1>
-	</div>
-	<div data-role="content">	
-		Welcome to the Oasis Tea Zone Mobile App! We have stores in three locations in the greater Seattle, Washington area: one in the International District, one in the University District, and one inside the Renton Village Uwajimaya.
-
-We serve up delicious traditional style Taiwanese bubble tea, in addition to a wide selection of unique flavored teas, slushes, and other blended and shaken beverages you can't get anywhere else. Oasis also offers a variety of tasty snacks and sweet desserts, including our famous popcorn chicken.
-
-	
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-<div data-role="page" id="socialMedia" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	 <a href="#aboutUs">Back</a>
-		<h1>Social Media</h1>
-	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-            <a href="https://www.facebook.com/seattleoasis" data-role="button">Facebook</a>
-            <a href="https://instagram.com/oasisteazone/" data-role="button">Instagram</a>
-            <a href="http://www.yelp.com/biz/oasis-tea-zone-renton" data-role="button">Yelp</a>
-		</ul>		
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-<div data-role="page" id="FAQ" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	 <a href="#aboutUs">Back</a>
-		<h1>FAQ</h1>
-	</div>
-	<div data-role="content">	
-	<br>	Bubble tea originated in Taiwan in the 1980s, but in recent years it has gained popularity in other countries, including America. Many people experience bubble tea for the first time at Oasis, and they often have questions about what it is, where it comes from, and what options are available. Oasis offers a very wide variety of flavors and styles of bubble tea, and it can be a little overwhelming at first. On this page you can check out some answers to frequently asked questions and learn about the make up of your average bubble tea. 
-<br>
-<br><b>What is the origin of bubble tea?</b>
-<br>Bubble tea, also known as "foam tea" by some, originated in Taiwan. Every bubble tea shop has its own unique recipes, but your basic bubble tea usually consists of a black or green tea tea base, which has flavored syrups and/or milk added to it to create its own unique flavor. Some people add "toppings" to their bubble tea, which may include tapioca pearls, jellies, or puddings.
-<br>
-<br><b>Why is it called bubble tea?</b>
-<br>Non-blended varieties of bubble tea are shaken to combine the assorted ingredients, creating bubbles or foam, which is why they are called "bubble tea".
-<br>
-<br><b>What are tapioca pearls/boba/bubbles?</b>
-<br>Tapioca is a starch extracted from the cassava root, which is native to South America. Before preparation, tapioca pearls are small, hard, and opaque. They must be soaked and boiled before they reach the translucent, purple appearance we all know so well. Tapioca pearls are different from "tapioca pudding", which is ironically made with arrowroot and not cassava root! The name "tapioca pudding" is a bit of a misnomer in that respect.
-<br>
-<br><b>What options do you have for people with dietary restrictions? (ex. sugar free, caffeine free, dairy free, gluten free, vegan, etc.)</b>
-<br>We offer many options at Oasis. You may be surprised to learn that the classic recipe for milk tea uses non-dairy creamer, not milk! Many of our drinks, including milk tea and "snow" varieties, are non-dairy and perfect for our lactose intolerant and vegan customers. You can also substitute soymilk upon request. For our caffeine intolerant customers, we offer some hot loose herbal teas and all of our "snow" and "slush" drinks are made without caffeine. Tapioca pearls are naturally gluten free. Please let us know about your dietary restrictions up front, and we'll do our best to accomodate you!
-<br>
-<br><b>What's the best way to enjoy a bubble tea?</b>
-<br>Getting your first bubble tea can be a bit bewildering, so we thought we'd include the steps to properly enjoying your bubble tea. When you first receive your freshly sealed cup, give it a hearty shake, especially if you've gotten some tapioca pearls or jellies! This distributes your toppings throughout your tea, so they don't all get stuck at the bottom. Don't worry, the seal is very tight! Just don't squeeze the cup too much, or you might have a mess on your hands. Once you've shaken your drink, pierce the lid with the straw. Make sure to choose one of the "fat" straws if you got a drink with toppings! Last but not least, sip and enjoy.
-	
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-<div data-role="page" id="locations" data-theme="b">
-	<div data-role="header" data-position="fixed">
-         <a href="#welcome">Back</a>
-		<h1>Locations</h1>
-	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-            <a href="#rentonInfo" data-role="button">Renton</a>
-            <a href="#seattleInfo" data-role="button">Seattle</a>
-            <a href="#uwInfo" data-role="button">UW</a>
-		</ul>	
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-<div data-role="page" id="rentonInfo" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#locations">Back</a>
-		<h1>Renton</h1>
-	</div>
-	<div data-role="content">	
-		Hours: Mon - Thu  11am - 7pm 
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Fri - Sun  11am - 8pm 
-        <br>
-        <br>
-      	Address: 501 S Grady Way, Renton, WA 98057 
-        <br>
-        <br>
-        Phone Number: 425.227.7832 
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-<div data-role="page" id="seattleInfo" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#locations">Back</a>
-		<h1>Seattle</h1>
-	</div>
-	<div data-role="content">	
-		Hours: Sun - Thu  11am - 12am 
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Fri - Sat  11am - 2am 
-        <br>
-        <br>
-      	Address: 519 6th Ave S, Seattle, WA 98104 
-        <br>
-        <br>
-        Phone Number: 206.447.8098 
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-<div data-role="page" id="uwInfo" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    <a href="#locations">Back</a>
-		<h1>University of Washington</h1>
-	</div>
-	<div data-role="content">	
-		Hours: Mon - Sat  11am - 12pm 
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Sun  11am - 11pm 
-        <br>
-        <br>
-      	Address: 4508 University Way NE, Seattle, WA 98105 
-        <br>
-        <br>
-        Phone Number: 206.547.9967 
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-<div data-role="page" id="menu" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#welcome">Back</a>
-		<h1>Menu</h1>
-	</div>
-	<div data-role="content">	
-        	<a href="#milkTea" data-role="button">Milk Tea</a>
-            <a href="#flavorTea" data-role="button">Flavored Tea</a>
-            <a href="#slush" data-role="button">Slush</a>
-            <a href="#snow" data-role="button">Snow</a>	
-            <a href="#smoothies" data-role="button">Smoothies and Specialty</a>	
-            <a href="#toppings" data-role="button">Toppings</a>	
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
-
-<div data-role="page" id="milkTea" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#menu">Back</a>
-		<h1>Milk Tea</h1>
-	</div>
-	<div data-role="content">	
-	<br> Delicious, traditional style milk tea.
-	<br> Available hot or cold
-	<br>
-    <ul>
-        <li>Almond</li>
-        <li>Banana</li>
-        <li>Blueberry</li>
-        <li>Chocolate</li>
-        <li>Coconut</li>
-        <li>Coffee</li>
-        <li>Ginger</li>
-        <li>Green Apple</li>
-        <li>Green Bean</li>
-        <li>Green Milk Tea</li>
-        <li>Honey</li>
-        <li>Honeydew</li>
-        <li>Hong Kong Style</li>
-        <li>Jasmine </li>
-        <li>Lavender</li>
-        <li>Lavender/Mint</li>
-        <li>Lychee</li>
-        <li>Mango</li>
-        <li>Matcha</li>
-        <li>Mocha</li>
-        <li>Passion Fruit</li>
-        <li>Peach</li>
-        <li>Peppermint</li>
-        <li>Pineapple</li>
-        <li>Red Bean</li>
-        <li>Royal Milk Tea </li>
-        <li>Strawberry</li>
-        <li>Taro </li>
-        <li>Thai Tea</li>
-        <li>Vanilla</li>
+<div data-role="page" id="welcome" data-theme="d">
+  <div data-role="header" data-position="fixed">
+    <h1>Welcome Screen</h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <a href="aboutUs.html" data-role="button">About Us</a> 
+      <a href="#locations" data-role="button">Locations</a> 
+      <a href="#menu" data-role="button">Menu</a> 
+      <a href="#specials" data-role="button">Specials</a> 
+      <a href="#stampCard" data-role="button">Stamp Card</a>
     </ul>
-
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
 </div>
-
-<div data-role="page" id="flavorTea" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#menu">Back</a>
-		<h1>Flavored Tea</h1>
-	</div>
-	<div data-role="content">	
-	<br> Refreshing flavored black or green tea.
-	<br> Available hot or cold
-	<br>
-    <ul>
-        <li>Blueberry</li>
-        <li>Ginger</li>
-        <li>Grape</li>
-        <li>Green Apple</li>
-        <li>Guava</li>
-        <li>Honey</li>
-        <li>Honey Lemon**</li>
-        <li>Jasmine/Green Tea</li>
-        <li>Kiwi</li>
-        <li>Lemon**</li>
-        <li>Lychee</li>
-        <li>Mango</li>
-        <li>Passion Fruit</li>
-        <li>Peach</li>
-        <li>Peppermint</li>
-        <li>Pineapple </li>
-        <li>Sour Plum</li>
-        <li>Strawberry</li>
-        <li>Yogurt</li>
+<div data-role="page" id="aboutUs" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#welcome">Back</a>
+    <h1>About Us</h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <a href="#history" data-role="button">History</a> 
+      <a href="#socialMedia" data-role="button">Social Media</a> 
+      <a href="#FAQ" data-role="button">FAQ</a>
     </ul>
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
 </div>
-
-<div data-role="page" id="slush" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#menu">Back</a>
-		<h1>Slush</h1>
-	</div>
-	<div data-role="content">	
-	<br> Smooth and icey blended drink.
-	<br> Available in a variety of different flavors.
-	<br>
-    <ul>
-        <li>Blueberry*</li>
-        <li>Chocolate</li>
-        <li>Coconut</li>
-        <li>Coffee</li>
-        <li>Grape</li>
-        <li>Green Apple</li>
-        <li>Green Mango*</li>
-        <li>Honey</li>
-        <li>Honeydew</li>
-        <li>Kiwi</li>
-        <li>Lavender</li>
-        <li>Lavender/Mint</li>
-        <li>Lemon</li>
-        <li>Lychee</li>
-        <li>Mango*</li>
-        <li>Mocha</li>
-        <li>Passion Fruit</li>
-        <li>Peach*</li>
-        <li>Peppermint</li>
-        <li>Pineapple*</li>
-        <li>Sour Plum*</li>
-        <li>Strawberry*</li>
-        <li>Yogurt</li>
+<div data-role="page" id="history" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#aboutUs">Back</a>
+    <h1>History</h1>
+  </div>
+  <div data-role="content"> Welcome to the Oasis Tea Zone Mobile App! We have stores in three locations in the greater Seattle, Washington area: one in the International District, one in the University District, and one inside the Renton Village Uwajimaya.
+    
+    We serve up delicious traditional style Taiwanese bubble tea, in addition to a wide selection of unique flavored teas, slushes, and other blended and shaken beverages you can't get anywhere else. Oasis also offers a variety of tasty snacks and sweet desserts, including our famous popcorn chicken. </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="socialMedia" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#aboutUs">Back</a>
+    <h1>Social Media</h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <a href="https://www.facebook.com/seattleoasis" data-role="button">Facebook</a> <a href="https://instagram.com/oasisteazone/" data-role="button">Instagram</a> <a href="http://www.yelp.com/biz/oasis-tea-zone-renton" data-role="button">Yelp</a>
     </ul>
-
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
 </div>
-
-<div data-role="page" id="snow" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#menu">Back</a>
-		<h1>Snow</h1>
-	</div>
-	<div data-role="content">	
-	<br> Creamy blended shake.
-	<br> Available in a variety of different flavors.
-	<br>
+<div data-role="page" id="FAQ" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#aboutUs">Back</a>
+    <h1>FAQ</h1>
+  </div>
+  <div data-role="content"> <br>
+    Bubble tea originated in Taiwan in the 1980s, but in recent years it has gained popularity in other countries, including America. Many people experience bubble tea for the first time at Oasis, and they often have questions about what it is, where it comes from, and what options are available. Oasis offers a very wide variety of flavors and styles of bubble tea, and it can be a little overwhelming at first. On this page you can check out some answers to frequently asked questions and learn about the make up of your average bubble tea. <br>
+    <br>
+    <b>What is the origin of bubble tea?</b> <br>
+    Bubble tea, also known as "foam tea" by some, originated in Taiwan. Every bubble tea shop has its own unique recipes, but your basic bubble tea usually consists of a black or green tea tea base, which has flavored syrups and/or milk added to it to create its own unique flavor. Some people add "toppings" to their bubble tea, which may include tapioca pearls, jellies, or puddings. <br>
+    <br>
+    <b>Why is it called bubble tea?</b> <br>
+    Non-blended varieties of bubble tea are shaken to combine the assorted ingredients, creating bubbles or foam, which is why they are called "bubble tea". <br>
+    <br>
+    <b>What are tapioca pearls/boba/bubbles?</b> <br>
+    Tapioca is a starch extracted from the cassava root, which is native to South America. Before preparation, tapioca pearls are small, hard, and opaque. They must be soaked and boiled before they reach the translucent, purple appearance we all know so well. Tapioca pearls are different from "tapioca pudding", which is ironically made with arrowroot and not cassava root! The name "tapioca pudding" is a bit of a misnomer in that respect. <br>
+    <br>
+    <b>What options do you have for people with dietary restrictions? (ex. sugar free, caffeine free, dairy free, gluten free, vegan, etc.)</b> <br>
+    We offer many options at Oasis. You may be surprised to learn that the classic recipe for milk tea uses non-dairy creamer, not milk! Many of our drinks, including milk tea and "snow" varieties, are non-dairy and perfect for our lactose intolerant and vegan customers. You can also substitute soymilk upon request. For our caffeine intolerant customers, we offer some hot loose herbal teas and all of our "snow" and "slush" drinks are made without caffeine. Tapioca pearls are naturally gluten free. Please let us know about your dietary restrictions up front, and we'll do our best to accomodate you! <br>
+    <br>
+    <b>What's the best way to enjoy a bubble tea?</b> <br>
+    Getting your first bubble tea can be a bit bewildering, so we thought we'd include the steps to properly enjoying your bubble tea. When you first receive your freshly sealed cup, give it a hearty shake, especially if you've gotten some tapioca pearls or jellies! This distributes your toppings throughout your tea, so they don't all get stuck at the bottom. Don't worry, the seal is very tight! Just don't squeeze the cup too much, or you might have a mess on your hands. Once you've shaken your drink, pierce the lid with the straw. Make sure to choose one of the "fat" straws if you got a drink with toppings! Last but not least, sip and enjoy. </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="locations" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#welcome">Back</a>
+    <h1>Locations</h1>
+  </div>
+ <div data-role="tabs" id="tabs">
+  <div data-role="navbar">
     <ul>
-        <li>Almond</li>
-        <li>Banana**</li>
-        <li>Blueberry*</li>
-        <li>Chocolate</li>
-        <li>Coconut</li>
-        <li>Coconut/Green Bean*</li>
-        <li>Coffee</li>
-        <li>Ginger</li>
-        <li>Grape</li>
-        <li>Green Apple</li>
-        <li>Green Bean*</li>
-        <li>Green Mango*</li>
-        <li>Honey</li>
-        <li>Honeydew</li>
-        <li>Jasmine</li>
-        <li>Kiwi</li>
-        <li>Lavender</li>
-        <li>Lavender/Mint</li>
-        <li>Lemon</li>
-        <li>Lychee</li>
-        <li>Mango*</li>
-        <li>Matcha</li>
-        <li>Milk Tea Snow</li>
-        <li>Mocha</li>
-        <li>Passion Fruit</li>
-        <li>Peach*</li>
-        <li>Peppermint</li>
-        <li>Pineapple*</li>
-        <li>Red Bean*</li>
-        <li>Sour Plum*</li>
-        <li>Strawberry*</li>
-        <li>Strawberry/Taro</li>
-        <li>Taro</li>
-        <li>Thai Tea Snow</li>
-        <li>Vanilla</li>
-        <li>Yogurt</li>
+      <li><a href="#rentonInfo" class="ui-btn-active" data-ajax="false">Renton</a></li>
+      <li><a href="#seattleInfo" data-ajax="false">Seattle</a></li>
+      <li><a href="#uwInfo" data-ajax="false">UW</a></li>
     </ul>
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-</div>
+  </div>
+	<iframe name=frame src="#rentonInfo" width=100% height=100%></iframe>
+  </div>
+</div> 
 
-<div data-role="page" id="smoothies" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#menu">Back</a>
-		<h1>Smoothies and Specialty</h1>
-	</div>
-	<div data-role="content">	
-	<br> Tasty and unique drinks you won't find anywhere else.
-	<br> Smoothies made with 100% real fruit.
-	<br>
+<!--   <div data-role="content">
+
+    <ul data-role="listview">
+      <a href="#rentonInfo" data-role="button">Renton</a> 
+      <a href="#seattleInfo" data-role="button">Seattle</a> 
+      <a href="#uwInfo" data-role="button">UW</a>
+    </ul>
+  </div> -->
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="rentonInfo" data-theme="d" class="ui-body-d tablist-content">
+  <div data-role="content">
+  	<center>
+  	Hours: Mon - Thu  11am - 7pm <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Fri - Sun  11am - 8pm <br>
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.0234588144067!2d-122.21227879999999!3d47.4699723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54905d4c2b567605%3A0x7373adc2423f8593!2sUwajimaya!5e0!3m2!1sen!2sus!4v1440628878004" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <br>
+    Address: 501 S Grady Way, Renton, WA 98057 <br>
+    <br>
+    Phone Number: 425.227.7832 
+   	</center> 
+    </div>
+</div>
+<div data-role="page" id="seattleInfo" data-theme="d" class="ui-body-d tablist-content"++>
+  <div data-role="header" data-position="fixed"> <a href="#locations">Back</a>
+    <h1>Seattle</h1>
+  </div>
+  <div data-role="content"> 
+  	<center>
+  	Hours: Sun - Thu  11am - 12am <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Fri - Sat  11am - 2am <br>
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10761.860388031044!2d-122.3265029!3d47.5976454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc50c370b98d3c6da!2sOasis+Tea+Zone!5e0!3m2!1sen!2sus!4v1440628408341" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <br>
+    Address: 519 6th Ave S, Seattle, WA 98104 <br>
+    <br>
+    Phone Number: 206.447.8098 
+    </center>
+    </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="uwInfo" data-theme="d" class="ui-body-d tablist-content">
+  <div data-role="header" data-position="fixed"> <a href="#locations">Back</a>
+    <h1>University of Washington</h1>
+  </div>
+  <div data-role="content"> 
+    <center>
+    Hours: Mon - Sat  11am - 12pm <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Sun  11am - 11pm <br>
+    <br>
+    <iframe src=	"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43021.124618349735!2d-122.3196719!3d47.62962449999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148ae4f0d1ab%3A0x18588cfe37f486c1!2sOasis!5e0!3m2!1sen!2sus!4v1440628667378" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <br>
+    Address: 4508 University Way NE, Seattle, WA 98105 <br>
+    <br>
+    Phone Number: 206.547.9967 
+    </center>
+    </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="menu" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#welcome">Back</a>
+    <h1>Menu</h1>
+  </div>
+  <div data-role="content"> <a href="#milkTea" data-role="button">Milk Tea</a> <a href="#flavorTea" data-role="button">Flavored Tea</a> <a href="#slush" data-role="button">Slush</a> <a href="#snow" data-role="button">Snow</a> <a href="#smoothies" data-role="button">Smoothies and Specialty</a> <a href="#toppings" data-role="button">Toppings</a> </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="milkTea" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
+    <h1>Milk Tea</h1>
+  </div>
+  <div data-role="content"> <br>
+    Delicious, traditional style milk tea. <br>
+    Available hot or cold <br>
     <ul>
-        <li>Strawberry Smoothie</li>
-        <li>Mango Smoothie </li>
-        <li>Pineapple Smoothie </li>
-        <li>Avocado Smoothie</li>
-        <li>Durian Smoothie</li>
-        <li>Orange Creamsicle</li>
-        <li>Vanilla Strawberry Crunch</li>
-        <li>Cookies and Cream</li>
+      <li>Almond</li>
+      <li>Banana</li>
+      <li>Blueberry</li>
+      <li>Chocolate</li>
+      <li>Coconut</li>
+      <li>Coffee</li>
+      <li>Ginger</li>
+      <li>Green Apple</li>
+      <li>Green Bean</li>
+      <li>Green Milk Tea</li>
+      <li>Honey</li>
+      <li>Honeydew</li>
+      <li>Hong Kong Style</li>
+      <li>Jasmine </li>
+      <li>Lavender</li>
+      <li>Lavender/Mint</li>
+      <li>Lychee</li>
+      <li>Mango</li>
+      <li>Matcha</li>
+      <li>Mocha</li>
+      <li>Passion Fruit</li>
+      <li>Peach</li>
+      <li>Peppermint</li>
+      <li>Pineapple</li>
+      <li>Red Bean</li>
+      <li>Royal Milk Tea </li>
+      <li>Strawberry</li>
+      <li>Taro </li>
+      <li>Thai Tea</li>
+      <li>Vanilla</li>
     </ul>
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
 </div>
-
-<div data-role="page" id="toppings" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#menu">Back</a>
-		<h1>Toppings</h1>
-	</div>
-    <div data-role="content">	
-    <br> Add one of our delicious toppings to your drink!
-	<br>
+<div data-role="page" id="flavorTea" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
+    <h1>Flavored Tea</h1>
+  </div>
+  <div data-role="content"> <br>
+    Refreshing flavored black or green tea. <br>
+    Available hot or cold <br>
     <ul>
-        <li>Tapioca</li>
-        <li>Lychee Jelly</li>
-        <li>Rainbow Jelly</li>
-        <li>Mango Jelly</li>
-        <li>Apple Jelly</li>
-        <li>Coffee Jelly</li>
-        <li>Egg Pudding</li>
+      <li>Blueberry</li>
+      <li>Ginger</li>
+      <li>Grape</li>
+      <li>Green Apple</li>
+      <li>Guava</li>
+      <li>Honey</li>
+      <li>Honey Lemon**</li>
+      <li>Jasmine/Green Tea</li>
+      <li>Kiwi</li>
+      <li>Lemon**</li>
+      <li>Lychee</li>
+      <li>Mango</li>
+      <li>Passion Fruit</li>
+      <li>Peach</li>
+      <li>Peppermint</li>
+      <li>Pineapple </li>
+      <li>Sour Plum</li>
+      <li>Strawberry</li>
+      <li>Yogurt</li>
     </ul>
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
 </div>
-
-<div data-role="page" id="specials" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#welcome">Back</a>
-		<h1>Specials</h1>
-	</div>
-	<div data-role="content">	
-		<br>Did you know you can get a <b>FREE</b> drink on your birthday?
-		<br> 	
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
+<div data-role="page" id="slush" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
+    <h1>Slush</h1>
+  </div>
+  <div data-role="content"> <br>
+    Smooth and icey blended drink. <br>
+    Available in a variety of different flavors. <br>
+    <ul>
+      <li>Blueberry*</li>
+      <li>Chocolate</li>
+      <li>Coconut</li>
+      <li>Coffee</li>
+      <li>Grape</li>
+      <li>Green Apple</li>
+      <li>Green Mango*</li>
+      <li>Honey</li>
+      <li>Honeydew</li>
+      <li>Kiwi</li>
+      <li>Lavender</li>
+      <li>Lavender/Mint</li>
+      <li>Lemon</li>
+      <li>Lychee</li>
+      <li>Mango*</li>
+      <li>Mocha</li>
+      <li>Passion Fruit</li>
+      <li>Peach*</li>
+      <li>Peppermint</li>
+      <li>Pineapple*</li>
+      <li>Sour Plum*</li>
+      <li>Strawberry*</li>
+      <li>Yogurt</li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
 </div>
-
-<div data-role="page" id="stampCard" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#welcome">Back</a>
-		<h1>Stamp Card</h1>
-	</div>
-	<div data-role="content">	
-    	<ul data-role="listview">
-            <a href="#logIn" data-role="button">Log In</a>
-            <a href="#signUp" data-role="button">Sign Up</a>        	
-
-        </ul>
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
+<div data-role="page" id="snow" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
+    <h1>Snow</h1>
+  </div>
+  <div data-role="content"> <br>
+    Creamy blended shake. <br>
+    Available in a variety of different flavors. <br>
+    <ul>
+      <li>Almond</li>
+      <li>Banana**</li>
+      <li>Blueberry*</li>
+      <li>Chocolate</li>
+      <li>Coconut</li>
+      <li>Coconut/Green Bean*</li>
+      <li>Coffee</li>
+      <li>Ginger</li>
+      <li>Grape</li>
+      <li>Green Apple</li>
+      <li>Green Bean*</li>
+      <li>Green Mango*</li>
+      <li>Honey</li>
+      <li>Honeydew</li>
+      <li>Jasmine</li>
+      <li>Kiwi</li>
+      <li>Lavender</li>
+      <li>Lavender/Mint</li>
+      <li>Lemon</li>
+      <li>Lychee</li>
+      <li>Mango*</li>
+      <li>Matcha</li>
+      <li>Milk Tea Snow</li>
+      <li>Mocha</li>
+      <li>Passion Fruit</li>
+      <li>Peach*</li>
+      <li>Peppermint</li>
+      <li>Pineapple*</li>
+      <li>Red Bean*</li>
+      <li>Sour Plum*</li>
+      <li>Strawberry*</li>
+      <li>Strawberry/Taro</li>
+      <li>Taro</li>
+      <li>Thai Tea Snow</li>
+      <li>Vanilla</li>
+      <li>Yogurt</li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
 </div>
-
-<div data-role="page" id="logIn" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#stampCard">Back</a>
-		<h1>Log In</h1>
-	</div>
-	<div data-role="content">	
-	<form method = "POST" onSubmit="return submitForm()" data-ajax = "false">
-  	<label>Username:</label> <input type="text" name="username"  placeholder="username">
-    
-    <label>Password:</label> <input type="text" name="password"  placeholder="password">
-    
- 	 <input type="submit" value="Submit">
-	</form>	
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
+<div data-role="page" id="smoothies" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
+    <h1>Smoothies and Specialty</h1>
+  </div>
+  <div data-role="content"> <br>
+    Tasty and unique drinks you won't find anywhere else. <br>
+    Smoothies made with 100% real fruit. <br>
+    <ul>
+      <li>Strawberry Smoothie</li>
+      <li>Mango Smoothie </li>
+      <li>Pineapple Smoothie </li>
+      <li>Avocado Smoothie</li>
+      <li>Durian Smoothie</li>
+      <li>Orange Creamsicle</li>
+      <li>Vanilla Strawberry Crunch</li>
+      <li>Cookies and Cream</li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
 </div>
-
-<div data-role="page" id="signUp" data-theme="b">
-	<div data-role="header" data-position="fixed">
-    	<a href="#stampCard">Back</a>
-		<h1>Sign Up</h1>
-	</div>
-	<div data-role="content">	
-	<form method = "POST" onSubmit="return submitForm()">
-  	<label>Username:</label> <input type="text" name="username"  placeholder="username">
-    
-    <label>Password:</label> <input type="text" name="password"  placeholder="password">
-    
-    <label>Re-enter Password:</label> <input type="text" name="password"  placeholder="re-enter password">
-    
-     <label> Birthdate: </label> <input type="text" name="birthdate" placeholder="MM/DD">
-    
-    <label>Email (In case you forget your username/password): </label><input type="text" name="phoneNumber" placeholder="ILoveOasis@Oasis.com">
-    
- 	 <input type="submit" value="Submit">
-	</form>	
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
-    
-    <div data-role="page" id="submitUser" data-theme="b" data-add-back-btn="true">
-	<div data-role="header" data-position="fixed">
-    	<a href="#welcome">Back</a>
-		<h1>New User Confirmation</h1>
-	</div>
-	<div data-role="content">	
-		<div id = "output">
-        </div>
-        
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<h4><center>Oasis Tea Zone</center></h4>
-	</div>
+<div data-role="page" id="toppings" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#menu">Back</a>
+    <h1>Toppings</h1>
+  </div>
+  <div data-role="content"> <br>
+    Add one of our delicious toppings to your drink! <br>
+    <ul>
+      <li>Tapioca</li>
+      <li>Lychee Jelly</li>
+      <li>Rainbow Jelly</li>
+      <li>Mango Jelly</li>
+      <li>Apple Jelly</li>
+      <li>Coffee Jelly</li>
+      <li>Egg Pudding</li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
 </div>
-    
+<div data-role="page" id="specials" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#welcome">Back</a>
+    <h1>Specials</h1>
+  </div>
+  <div data-role="content"> <br>
+    Did you know you can get a <b>FREE</b> drink on your birthday? <br>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="stampCard" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#welcome">Back</a>
+    <h1>Stamp Card</h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <a href="#logIn" data-role="button">Log In</a> <a href="#signUp" data-role="button">Sign Up</a>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="logIn" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#stampCard">Back</a>
+    <h1>Log In</h1>
+  </div>
+  <div data-role="content">
+    <form method = "POST" onSubmit="return submitForm()" data-ajax = "false">
+      <label>Username:</label>
+      <input type="text" name="username"  placeholder="username">
+      <label>Password:</label>
+      <input type="text" name="password"  placeholder="password">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="signUp" data-theme="d">
+  <div data-role="header" data-position="fixed"> <a href="#stampCard">Back</a>
+    <h1>Sign Up</h1>
+  </div>
+  <div data-role="content">
+    <form method = "POST" onSubmit="return submitForm()">
+      <label>Username:</label>
+      <input type="text" name="username"  placeholder="username">
+      <label>Password:</label>
+      <input type="text" name="password"  placeholder="password">
+      <label>Re-enter Password:</label>
+      <input type="text" name="password"  placeholder="re-enter password">
+      <label> Birthdate: </label>
+      <input type="text" name="birthdate" placeholder="MM/DD">
+      <label>Email (In case you forget your username/password): </label>
+      <input type="text" name="phoneNumber" placeholder="ILoveOasis@Oasis.com">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>
+      <center>
+        Oasis Tea Zone
+      </center>
+    </h4>
+  </div>
+  <div data-role="page" id="submitUser" data-theme="d" data-add-back-btn="true">
+    <div data-role="header" data-position="fixed"> <a href="#welcome">Back</a>
+      <h1>New User Confirmation</h1>
+    </div>
+    <div data-role="content">
+      <div id = "output"> </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <h4>
+        <center>
+          Oasis Tea Zone
+        </center>
+      </h4>
+    </div>
+  </div>
 </div>
 </body>
 </html>
