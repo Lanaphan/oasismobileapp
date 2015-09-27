@@ -4,18 +4,11 @@
 <title>Oasis Mobile App</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
 <link rel="stylesheet" href="css/themes.OasisStyleSheet.css" />
 <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-
 <script type="text/javascript" src="phonegap.js"></script>
-
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-
 <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-
 <script type="text/javascript" src="js/index.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,7 +44,7 @@
   </div>
   <div data-role="content">
     <ul data-role="listview">
-      <a href="aboutUs.html" data-role="button">About Us</a> 
+      <a href="#aboutUs" data-role="button">About Us</a> 
       <a href="#locations" data-role="button">Locations</a> 
       <a href="#menu" data-role="button">Menu</a> 
       <a href="#specials" data-role="button">Specials</a> 
@@ -68,17 +61,21 @@
 </div>
 <div data-role="page" id="aboutUs" data-theme="d">
   <div data-role="header" data-position="fixed"> <a href="#welcome">Back</a>
-    <h1>About Us</h1>
+      <h1>About Us</h1>
   </div>
-  <div data-role="content">
-    <ul data-role="listview">
-      <a href="#history" data-role="button">History</a> 
-      <a href="#socialMedia" data-role="button">Social Media</a> 
-      <a href="#FAQ" data-role="button">FAQ</a>
+ <div data-role="tabs" id="tabs">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#history" target="aboutframe">History</a> </li>
+      <li><a href="#socialMedia" target="aboutframe">Social Media</a> </li>
+      <li><a href="#FAQ" target="aboutframe">FAQ</a></li>
     </ul>
   </div>
+	<iframe src="#history" name="aboutframe" id="aboutframe" width="100%" height="450" ></iframe>
+  </div>
+</div> 
   <div data-role="footer" data-position="fixed">
-    <h4>
+	 <h4>
       <center>
         Oasis Tea Zone
       </center>
@@ -86,41 +83,20 @@
   </div>
 </div>
 <div data-role="page" id="history" data-theme="d">
-  <div data-role="header" data-position="fixed"> <a href="#aboutUs">Back</a>
-    <h1>History</h1>
-  </div>
   <div data-role="content"> Welcome to the Oasis Tea Zone Mobile App! We have stores in three locations in the greater Seattle, Washington area: one in the International District, one in the University District, and one inside the Renton Village Uwajimaya.
     
     We serve up delicious traditional style Taiwanese bubble tea, in addition to a wide selection of unique flavored teas, slushes, and other blended and shaken beverages you can't get anywhere else. Oasis also offers a variety of tasty snacks and sweet desserts, including our famous popcorn chicken. </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
 </div>
+
 <div data-role="page" id="socialMedia" data-theme="d">
-  <div data-role="header" data-position="fixed"> <a href="#aboutUs">Back</a>
-    <h1>Social Media</h1>
-  </div>
   <div data-role="content">
     <ul data-role="listview">
       <a href="https://www.facebook.com/seattleoasis" data-role="button">Facebook</a> <a href="https://instagram.com/oasisteazone/" data-role="button">Instagram</a> <a href="http://www.yelp.com/biz/oasis-tea-zone-renton" data-role="button">Yelp</a>
     </ul>
   </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
 </div>
+
 <div data-role="page" id="FAQ" data-theme="d">
-  <div data-role="header" data-position="fixed"> <a href="#aboutUs">Back</a>
-    <h1>FAQ</h1>
-  </div>
   <div data-role="content"> <br>
     Bubble tea originated in Taiwan in the 1980s, but in recent years it has gained popularity in other countries, including America. Many people experience bubble tea for the first time at Oasis, and they often have questions about what it is, where it comes from, and what options are available. Oasis offers a very wide variety of flavors and styles of bubble tea, and it can be a little overwhelming at first. On this page you can check out some answers to frequently asked questions and learn about the make up of your average bubble tea. <br>
     <br>
@@ -138,13 +114,7 @@
     <br>
     <b>What's the best way to enjoy a bubble tea?</b> <br>
     Getting your first bubble tea can be a bit bewildering, so we thought we'd include the steps to properly enjoying your bubble tea. When you first receive your freshly sealed cup, give it a hearty shake, especially if you've gotten some tapioca pearls or jellies! This distributes your toppings throughout your tea, so they don't all get stuck at the bottom. Don't worry, the seal is very tight! Just don't squeeze the cup too much, or you might have a mess on your hands. Once you've shaken your drink, pierce the lid with the straw. Make sure to choose one of the "fat" straws if you got a drink with toppings! Last but not least, sip and enjoy. </div>
-  <div data-role="footer" data-position="fixed">
-    <h4>
-      <center>
-        Oasis Tea Zone
-      </center>
-    </h4>
-  </div>
+
 </div>
 <div data-role="page" id="locations" data-theme="d">
   <div data-role="header" data-position="fixed"> <a href="#welcome">Back</a>
@@ -230,8 +200,7 @@
       <li><a href="#flavorTea" target="menuframe">Flavored Tea</a> </li>
       <li><a href="#slush" target="menuframe">Slush</a> </li>
       <li><a href="#snow" target="menuframe">Snow</a> </li>
-      <li><a href="#smoothies" target="menuframe">Smoothies and Specialty</a></li>
-      <li><a href="#toppings" target="menuframe">Toppings</a> </li>
+      <li><a href="#smoothies" target="menuframe">Smoothies & Toppings</a></li>
     </ul>
   </div>
 	<iframe src="#milkTea" name="menuframe" id="menuframe" width="100%" height="450" ></iframe>
@@ -399,11 +368,8 @@
       <li>Vanilla Strawberry Crunch</li>
       <li>Cookies and Cream</li>
     </ul>
-  </div>
-</div>
-<div data-role="page" id="toppings" data-theme="d">
-  <div data-role="content"> <br>
-    Add one of our delicious toppings to your drink! <br>
+    <br>
+     Add one of our delicious toppings to your drink! <br>
     <ul>
       <li>Tapioca</li>
       <li>Lychee Jelly</li>
